@@ -53,16 +53,14 @@
   .lg\:p-12 { padding: 3rem !important; }
 }
 
-/* Custom theme colors - 1991년 3월 21일생 사주/점성술 기반 색상 */
-/* 양자리(불의 기호) + 신금년(금속 양띠) = 따뜻한 금색/주황색 계열 */
 @theme {
-  --color-portfolio-primary: #ff6b35;
-  --color-portfolio-secondary: #1a1a1a;
-  --color-portfolio-accent: #ffd700;
-  --color-portfolio-background: #1a0f0a;
-  --color-portfolio-surface: #2a1810;
-  --color-portfolio-text: #f5e6d3;
-  --color-portfolio-text-secondary: #c4a574;
+  --color-portfolio-primary: #1e3a8a;
+  --color-portfolio-secondary: #0f172a;
+  --color-portfolio-accent: #3b82f6;
+  --color-portfolio-background: #020617;
+  --color-portfolio-surface: #0f172a;
+  --color-portfolio-text: #e2e8f0;
+  --color-portfolio-text-secondary: #94a3b8;
 }
 
 /* Global styles */
@@ -95,12 +93,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ff6b35;
+  background: #1e3a8a;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ffd700;
+  background: #3b82f6;
 }
 
 /* GSAP loader */
@@ -126,5 +124,5 @@ body {
   height: 100%;
   pointer-events: none;
   z-index: 0;
-  background: linear-gradient(to bottom, #2a1810 0%, #1a0f0a 50%, #0f0705 100%);
+  background: linear-gradient(to bottom, #0f172a 0%, #020617 50%, #000000 100%);
 }

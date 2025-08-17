@@ -36,6 +36,7 @@ export default function ContactSection() {
                 leftSection={<IconMail size={20} />}
                 component="a"
                 href="mailto:seungwoo321@gmail.com"
+                className="bg-blue-900 hover:bg-blue-800 text-white"
               >
                 seungwoo321@gmail.com
               </Button>
@@ -48,6 +49,7 @@ export default function ContactSection() {
             <Group justify="center" gap="md">
               <Button
                 variant="light"
+                className="bg-slate-100 hover:bg-slate-200 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300"
                 leftSection={<IconBrandGithub size={20} />}
                 component="a"
                 href="https://github.com/Seungwoo321"
@@ -57,6 +59,7 @@ export default function ContactSection() {
               </Button>
               <Button
                 variant="light"
+                className="bg-indigo-100 hover:bg-indigo-200 text-indigo-900 dark:bg-indigo-950/30 dark:hover:bg-indigo-900/50 dark:text-indigo-300"
                 leftSection={<IconBrandLinkedin size={20} />}
                 component="a"
                 href="https://www.linkedin.com/in/seungwoo-lee-6b1b0b1b0/"
@@ -66,6 +69,7 @@ export default function ContactSection() {
               </Button>
               <Button
                 variant="light"
+                className="bg-cyan-100 hover:bg-cyan-200 text-cyan-900 dark:bg-cyan-950/30 dark:hover:bg-cyan-900/50 dark:text-cyan-300"
                 leftSection={<IconBook size={20} />}
                 component="a"
                 href="https://seungwoo321.github.io/"

@@ -152,7 +152,7 @@ function ProjectCard({ project }: { project: Project }) {
             {project.stats.stars && (
               <Tooltip label="GitHub Stars">
                 <Group gap="xs">
-                  <IconStar size={16} className="text-yellow-500" />
+                  <IconStar size={16} className="text-yellow-600" />
                   <Text size="sm" fw={500}>{project.stats.stars}</Text>
                 </Group>
               </Tooltip>
@@ -160,7 +160,7 @@ function ProjectCard({ project }: { project: Project }) {
             {project.stats.downloads && (
               <Tooltip label="Total Downloads">
                 <Group gap="xs">
-                  <IconDownload size={16} className="text-green-500" />
+                  <IconDownload size={16} className="text-emerald-600" />
                   <Text size="sm" fw={500}>{project.stats.downloads.toLocaleString()}</Text>
                 </Group>
               </Tooltip>
@@ -168,7 +168,7 @@ function ProjectCard({ project }: { project: Project }) {
             {project.stats.coverage && (
               <Tooltip label="Test Coverage">
                 <Group gap="xs">
-                  <IconChartBar size={16} className="text-blue-500" />
+                  <IconChartBar size={16} className="text-blue-600" />
                   <Text size="sm" fw={500}>{project.stats.coverage}%</Text>
                 </Group>
               </Tooltip>
@@ -176,7 +176,7 @@ function ProjectCard({ project }: { project: Project }) {
             {project.stats.completion && (
               <Tooltip label="Completion">
                 <Group gap="xs">
-                  <IconChartBar size={16} className="text-violet-500" />
+                  <IconChartBar size={16} className="text-indigo-600" />
                   <Text size="sm" fw={500}>{project.stats.completion}</Text>
                 </Group>
               </Tooltip>
@@ -236,6 +236,7 @@ function ProjectCard({ project }: { project: Project }) {
                 target="_blank"
                 variant="light"
                 size="lg"
+                className="bg-blue-100 hover:bg-blue-200 text-blue-900 dark:bg-blue-950/30 dark:hover:bg-blue-900/50 dark:text-blue-300"
               >
                 {getIcon()}
               </ActionIcon>
@@ -248,7 +249,7 @@ function ProjectCard({ project }: { project: Project }) {
           href={`/project/${project.id}`}
           variant="subtle"
           size="xs"
-          className="ml-auto"
+          className="ml-auto text-blue-800 hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-blue-900/20"
         >
           자세히 보기
         </Button>

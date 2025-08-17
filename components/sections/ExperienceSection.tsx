@@ -82,7 +82,7 @@ export default function ExperienceSection() {
               key={index}
               className="timeline-item"
               bullet={
-                <ThemeIcon size={48} radius="xl" color="blue">
+                <ThemeIcon size={48} radius="xl" className="bg-blue-900 text-white">
                   <IconBriefcase size={24} />
                 </ThemeIcon>
               }
@@ -91,9 +91,9 @@ export default function ExperienceSection() {
                   <Group justify="space-between" align="flex-start">
                     <div>
                       <Text size="xl" fw={700} className="mb-2">{exp.role}</Text>
-                      <Text size="lg" c="blue">{exp.company}</Text>
+                      <Text size="lg" className="text-blue-800 dark:text-blue-400">{exp.company}</Text>
                     </div>
-                    <Badge size="lg" variant="light">{exp.year}</Badge>
+                    <Badge size="lg" variant="light" className="bg-indigo-100 text-indigo-900 dark:bg-indigo-950/30 dark:text-indigo-300">{exp.year}</Badge>
                   </Group>
                 </div>
               }
@@ -106,15 +106,15 @@ export default function ExperienceSection() {
                   <Text size="xs" c="dimmed" fw={500} className="mb-3">주요 프로젝트</Text>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-green-500 rounded-full"></div>
+                      <div className="w-1 h-1 bg-cyan-500 rounded-full"></div>
                       <Text size="xs" c="dimmed">
-                        <span className="text-green-700 dark:text-green-400">HyperBilling 3.0</span> (2019-2022): 모놀리식 → Vue.js SPA 전환
+                        <span className="text-cyan-700 dark:text-cyan-400">HyperBilling 3.0</span> (2019-2022): 모놀리식 → Vue.js SPA 전환
                       </Text>
                     </div>
                     <div className="flex items-center gap-2">
-                      <div className="w-1 h-1 bg-green-500 rounded-full"></div>
+                      <div className="w-1 h-1 bg-cyan-500 rounded-full"></div>
                       <Text size="xs" c="dimmed">
-                        <span className="text-green-700 dark:text-green-400">Vue3 Pivottable</span> (2025-): Vue3 버전 재설계
+                        <span className="text-cyan-700 dark:text-cyan-400">Vue3 Pivottable</span> (2025-): Vue3 버전 재설계
                       </Text>
                     </div>
                   </div>

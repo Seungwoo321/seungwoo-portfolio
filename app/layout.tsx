@@ -5,7 +5,6 @@ import { ModalsProvider } from "@mantine/modals";
 import "@mantine/core/styles.css";
 import "@mantine/notifications/styles.css";
 import "./globals.css";
-import { theme } from "@/lib/mantine-theme";
 import Providers from "@/components/providers";
 
 // 시스템 폰트 사용으로 Google Fonts 의존성 제거
@@ -33,7 +32,7 @@ export default function RootLayout({
         <ColorSchemeScript defaultColorScheme="dark" />
       </head>
       <body className="font-sans">
-        <MantineProvider theme={theme} defaultColorScheme="dark">
+        <MantineProvider defaultColorScheme="dark">
           <Notifications position="top-right" />
           <ModalsProvider>
             <Providers>
