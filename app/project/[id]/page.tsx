@@ -11,7 +11,7 @@ import {
   IconUsers,
   IconCode,
   IconBulb,
-  IconQuestionMark,
+  IconMessageQuestion,
   IconScreenshot,
   IconChartBar,
   IconInfoCircle
@@ -137,9 +137,11 @@ export default function ProjectDetailPage() {
             <Tabs.Tab value="screenshots" leftSection={<IconScreenshot size={16} />}>
               스크린샷
             </Tabs.Tab>
-            <Tabs.Tab value="qa" leftSection={<IconQuestionMark size={16} />}>
-              Q&A
-            </Tabs.Tab>
+            {qa && qa.length > 0 && (
+              <Tabs.Tab value="qa" leftSection={<IconMessageQuestion size={16} />}>
+                Q&A
+              </Tabs.Tab>
+            )}
             <Tabs.Tab value="technical" leftSection={<IconCode size={16} />}>
               기술 상세
             </Tabs.Tab>
@@ -160,7 +162,7 @@ export default function ProjectDetailPage() {
               {(project.stats || project.achievements.length > 0) && (
                 <Card withBorder>
                   <Title order={3} size="h4" mb="md">주요 성과</Title>
-                  <SimpleGrid cols={{ base: 2, sm: 3, md: 4 }} spacing="lg">
+                  <SimpleGrid cols={{ base: 2, sm: 3, md: project.achievements.length === 3 ? 3 : 4 }} spacing="lg">
                     {project.achievements.map((achievement, idx) => (
                       <div key={idx} className="text-center">
                         <Text size="2xl" fw={700} className="text-blue-600 dark:text-blue-400">
@@ -209,17 +211,18 @@ export default function ProjectDetailPage() {
             {project.images && project.images.length > 0 ? (
               <SimpleGrid cols={{ base: 1, md: project.images.length === 1 ? 1 : 2 }} spacing="lg">
                 {project.images.map((image, idx) => (
-                  <Card key={idx} withBorder p={0}>
+                  <Card key={idx} withBorder>
                     <Card.Section>
                       <Image
                         src={image.url}
                         alt={image.alt}
                         h={project.images.length === 1 ? 400 : 300}
                         fit="contain"
+                        p="md"
                       />
                     </Card.Section>
                     {image.caption && (
-                      <Text size="sm" c="dimmed" mt="md" mb="md" ta="center">
+                      <Text size="sm" c="dimmed" mt="sm" ta="center" px="md" pb="md">
                         {image.caption}
                       </Text>
                     )}
@@ -242,7 +245,7 @@ export default function ProjectDetailPage() {
                     <Accordion.Control icon={
                       item.type === 'technical' ? <IconCode size={20} /> :
                       item.type === 'business' ? <IconChartBar size={20} /> :
-                      <IconQuestionMark size={20} />
+                      <IconBulb size={20} />
                     }>
                       <Text fw={500}>{item.question}</Text>
                     </Accordion.Control>
@@ -289,6 +292,20 @@ export default function ProjectDetailPage() {
                     {project.challenges.map((challenge, idx) => (
                       <Timeline.Item key={idx} bullet={<IconCode size={12} />}>
                         <Text size="sm">{challenge}</Text>
+                      </Timeline.Item>
+                    ))}
+                  </Timeline>
+                </Card>
+              )}
+
+              {/* Roadmap */}
+              {project.roadmap && project.roadmap.length > 0 && (
+                <Card withBorder>
+                  <Title order={3} size="h4" mb="md">개발 로드맵</Title>
+                  <Timeline active={0} bulletSize={24} lineWidth={2}>
+                    {project.roadmap.map((item, idx) => (
+                      <Timeline.Item key={idx} bullet={<IconBulb size={12} />}>
+                        <Text size="sm">{item}</Text>
                       </Timeline.Item>
                     ))}
                   </Timeline>

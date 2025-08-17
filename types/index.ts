@@ -15,6 +15,7 @@ export interface Project {
   teamSize?: number;
   achievements: Achievement[];
   features?: string[];
+  roadmap?: string[];
   challenges?: string[];
   links?: ProjectLink[];
   images?: ProjectImage[];

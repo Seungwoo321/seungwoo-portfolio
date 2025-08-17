@@ -17,7 +17,7 @@ import {
   IconBook,
   IconPlayerPlay
 } from '@tabler/icons-react';
-import { projects, getProjectsByCategory } from '@/constants/projects-data';
+import { projects, getProjectsByCategory, getAllProjects } from '@/constants/projects-data';
 import type { Project, ProjectCategory } from '@/types';
 import Link from 'next/link';
 
@@ -263,7 +263,7 @@ export default function ProjectsSection() {
   const [activeTab, setActiveTab] = useState<string | null>('all');
 
   const filteredProjects = activeTab === 'all' 
-    ? projects.filter(p => p.category !== 'work')
+    ? getAllProjects()
     : getProjectsByCategory(activeTab as ProjectCategory);
 
   return (
@@ -287,13 +287,19 @@ export default function ProjectsSection() {
         <Tabs value={activeTab} onChange={setActiveTab} className="mb-8">
           <Tabs.List grow>
             <Tabs.Tab value="all">
-              전체 ({projects.filter(p => p.category !== 'work').length})
+              전체 ({getAllProjects().length})
             </Tabs.Tab>
-            <Tabs.Tab value="opensource" leftSection={<IconCode size={16} />}>
-              오픈소스 ({getProjectsByCategory('opensource').length})
+            <Tabs.Tab value="opensource">
+              <div className="flex items-center justify-center gap-1.5 w-full">
+                <IconCode size={16} />
+                오픈소스 ({getProjectsByCategory('opensource').length})
+              </div>
             </Tabs.Tab>
-            <Tabs.Tab value="ai-powered" leftSection={<IconBrain size={16} />}>
-              AI 개발 ({getProjectsByCategory('ai-powered').length})
+            <Tabs.Tab value="ai-powered">
+              <div className="flex items-center justify-center gap-1.5 w-full">
+                <IconBrain size={16} />
+                AI 개발 ({getProjectsByCategory('ai-powered').length})
+              </div>
             </Tabs.Tab>
           </Tabs.List>
         </Tabs>

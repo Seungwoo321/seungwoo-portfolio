@@ -1,7 +1,7 @@
 'use client';
 
 import { Container, Title, Text, Button, Group, Badge } from '@mantine/core';
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconArrowDown } from '@tabler/icons-react';
+import { IconBrandGithub, IconBrandLinkedin, IconBook, IconArrowDown } from '@tabler/icons-react';
 
 export default function HeroSection() {
   const scrollToProjects = () => {
@@ -21,7 +21,7 @@ export default function HeroSection() {
           </Title>
           
           <Text className="text-xl md:text-2xl mb-6 text-gray-600 dark:text-gray-300">
-            Frontend Developer & Open Source Contributor
+            Frontend Developer
           </Text>
 
           {/* Key Highlights */}
@@ -33,27 +33,26 @@ export default function HeroSection() {
 
           {/* Brief Introduction */}
           <Text size="lg" className="mb-10 text-gray-700 dark:text-gray-300 max-w-2xl mx-auto">
-            오픈소스 생태계에 기여하며 실무와 사이드 프로젝트를 통해 
-            지속적으로 성장하는 프론트엔드 개발자입니다.
+            실무와 사이드 프로젝트를 통해 지속적으로 성장하는 프론트엔드 개발자입니다.
           </Text>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-2xl mx-auto">
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-blue-600 dark:text-blue-400">200+</Text>
+              <Text size="2xl" fw={700} className="text-blue-600 dark:text-blue-400">175+</Text>
               <Text size="sm" className="text-gray-600 dark:text-gray-400">GitHub Stars</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-green-600 dark:text-green-400">100K+</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">NPM Downloads</Text>
+              <Text size="2xl" fw={700} className="text-green-600 dark:text-green-400">850+</Text>
+              <Text size="sm" className="text-gray-600 dark:text-gray-400">Weekly Downloads</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-violet-600 dark:text-violet-400">9</Text>
+              <Text size="2xl" fw={700} className="text-violet-600 dark:text-violet-400">7</Text>
               <Text size="sm" className="text-gray-600 dark:text-gray-400">Active Projects</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-orange-600 dark:text-orange-400">100%</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">Test Coverage</Text>
+              <Text size="2xl" fw={700} className="text-orange-600 dark:text-orange-400">5년+</Text>
+              <Text size="sm" className="text-gray-600 dark:text-gray-400">Maintenance</Text>
             </div>
           </div>
 
@@ -81,12 +80,13 @@ export default function HeroSection() {
             </Button>
             <Button
               size="lg"
-              leftSection={<IconMail size={20} />}
+              leftSection={<IconBook size={20} />}
               component="a"
-              href="mailto:seungwoo321@gmail.com"
+              href="https://seungwoo321.github.io/"
+              target="_blank"
               variant="outline"
             >
-              Contact
+              Tech Blog
             </Button>
           </Group>
 
