@@ -306,10 +306,26 @@ export const projects: Project[] = [
       { type: 'demo', url: 'https://tailwind-grid-layout-omega.vercel.app/' },
     ],
     images: [
-      { url: '/images/tailwind-grid-1.png', alt: '그리드 레이아웃 데모' },
-      { url: '/images/tailwind-grid-2.png', alt: '반응형 브레이크포인트' },
-      { url: '/images/tailwind-grid-3.png', alt: '드래그 앤 드롭' },
-      { url: '/images/tailwind-grid-4.png', alt: '리사이즈 기능' },
+      { 
+        url: '/images/tailwind-grid-1.png', 
+        alt: '그리드 레이아웃 데모',
+        caption: '드래그 앤 드롭으로 자유롭게 배치 가능한 그리드 시스템 - 각 아이템의 위치와 크기를 실시간으로 조정'
+      },
+      { 
+        url: '/images/tailwind-grid-2.png', 
+        alt: '반응형 브레이크포인트',
+        caption: '화면 크기에 따라 자동으로 재배치되는 반응형 그리드 - lg, md, sm, xs 브레이크포인트 지원'
+      },
+      { 
+        url: '/images/tailwind-grid-3.png', 
+        alt: '드래그 앤 드롭',
+        caption: '직관적인 드래그 앤 드롭 인터페이스 - 충돌 감지 및 자동 재배치 기능 포함'
+      },
+      { 
+        url: '/images/tailwind-grid-4.png', 
+        alt: '리사이즈 기능',
+        caption: '8방향 리사이즈 핸들을 통한 정밀한 크기 조절 - 그리드 스냅 기능으로 정확한 배치'
+      },
     ],
   },
 

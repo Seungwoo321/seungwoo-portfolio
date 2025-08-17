@@ -216,7 +216,7 @@ export default function ProjectDetailPage() {
                       <Image
                         src={image.url}
                         alt={image.alt}
-                        h={project.images.length === 1 ? 400 : 300}
+                        h={project.images?.length === 1 ? 400 : 300}
                         fit="contain"
                         p="md"
                       />
@@ -257,18 +257,6 @@ export default function ProjectDetailPage() {
                             <code>{item.code}</code>
                           </pre>
                         </Card>
-                      )}
-                      {item.images && item.images.length > 0 && (
-                        <Stack gap="md" mt="md">
-                          {item.images.map((img, imgIdx) => (
-                            <Image
-                              key={imgIdx}
-                              src={img}
-                              alt={`Q&A 이미지 ${imgIdx + 1}`}
-                              radius="md"
-                            />
-                          ))}
-                        </Stack>
                       )}
                     </Accordion.Panel>
                   </Accordion.Item>
@@ -344,7 +332,6 @@ export default function ProjectDetailPage() {
           </Tabs.Panel>
         </Tabs>
 
-        {/* Navigation */}
         <Group justify="center" mt="xl">
           <Button
             component={Link}

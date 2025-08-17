@@ -1,10 +1,10 @@
 'use client';
 
-import { Container, Title, Timeline, Text, List, Badge, Group, Card, Progress, ThemeIcon, Tabs, Paper } from '@mantine/core';
-import { IconBriefcase, IconCode, IconUsers, IconTrophy, IconGitBranch, IconServer, IconRocket } from '@tabler/icons-react';
+import { Container, Title, Timeline, Text, Badge, Group, ThemeIcon } from '@mantine/core';
+import { IconBriefcase } from '@tabler/icons-react';
 import { useGSAP } from '@/hooks/useGSAP';
-import { gsap } from 'gsap/dist/gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { gsap } from 'gsap';
+import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,14 +17,6 @@ interface ExperienceDetail {
   teamSize?: number;
 }
 
-interface Project {
-  name: string;
-  period: string;
-  startDate: string;
-  endDate?: string;
-  description: string;
-  tech: string[];
-}
 
 const experienceHistory: ExperienceDetail[] = [
   {
@@ -50,23 +42,6 @@ const experienceHistory: ExperienceDetail[] = [
   }
 ];
 
-const majorProjects: Project[] = [
-  {
-    name: 'Vue3 Pivottable',
-    period: '2025.01 - 진행중',
-    startDate: '2025.01',
-    description: 'vue-pivottable의 Vue3 버전 재설계 - HyperBilling 차기 버전 대비',
-    tech: ['Vue3', 'TypeScript', 'Vite']
-  },
-  {
-    name: 'HyperBilling 3.0',
-    period: '2019.08 - 2022.11',
-    startDate: '2019.08',
-    endDate: '2022.11',
-    description: '모놀리식에서 Vue.js 기반 SPA로 전환',
-    tech: ['Vue.js', 'Node.js', 'AWS', 'Docker']
-  }
-];
 
 export default function ExperienceSection() {
   useGSAP((gsap) => {

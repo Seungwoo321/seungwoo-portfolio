@@ -48,28 +48,3 @@ export interface ProjectImage {
   caption?: string;
 }
 
-export interface Experience {
-  company: string;
-  position: string;
-  period: string;
-  description: string;
-  projects: string[];
-  achievements: string[];
-}
-
-export interface Skill {
-  category: 'expert' | 'proficient' | 'experienced';
-  name: string;
-  icon?: string;
-  years?: number;
-}
-
-export interface OpenSourceProject {
-  name: string;
-  description: string;
-  stars: number;
-  forks: number;
-  downloads?: number;
-  url: string;
-  language: string;
-}

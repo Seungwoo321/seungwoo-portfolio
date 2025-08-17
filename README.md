@@ -1,34 +1,44 @@
 # 이승우 포트폴리오
 
-10년차 프론트엔드 개발자 포트폴리오 웹사이트
+10년차 시니어 프론트엔드 개발자 포트폴리오 웹사이트
 
 ## 🚀 기술 스택
 
-- **Framework**: Next.js 15 (App Router)
-- **Language**: TypeScript
+- **Framework**: Next.js 15.4.4 (App Router)
+- **Language**: TypeScript 5
 - **UI Library**: Mantine UI v8
 - **Styling**: Tailwind CSS v4
-- **Animation**: GSAP + React
-- **3D Graphics**: Three.js + React Three Fiber
-- **State Management**: Zustand
-- **Data Fetching**: TanStack Query
+- **Animation**: GSAP 3.13
+- **3D Graphics**: Three.js
+- **Data Fetching**: TanStack Query v5
 
 ## 📁 프로젝트 구조
 
 ```
 seungwoo-portfolio/
 ├── app/                    # Next.js App Router
+│   ├── layout.tsx         # 루트 레이아웃
+│   ├── page.tsx           # 메인 페이지
+│   └── project/[id]/      # 프로젝트 상세 페이지
 ├── components/            
 │   ├── sections/          # 페이지 섹션 컴포넌트
-│   ├── ui/                # UI 컴포넌트
+│   │   ├── HeroSection.tsx
+│   │   ├── ExperienceSection.tsx
+│   │   ├── ProjectsSection.tsx
+│   │   └── ContactSection.tsx
 │   ├── three/             # Three.js 컴포넌트
-│   └── providers.tsx      # Context Providers
-├── constants/             # 포트폴리오 데이터
-├── hooks/                 # Custom hooks
-├── lib/                   # 유틸리티 함수
-├── store/                 # Zustand stores
-├── types/                 # TypeScript types
-└── public/                # 정적 파일
+│   │   └── ThreeBackground.tsx
+│   └── providers.tsx      # React Query Provider
+├── constants/             
+│   └── projects-data.ts   # 프로젝트 데이터
+├── hooks/                 
+│   └── useGSAP.ts        # GSAP 커스텀 훅
+├── lib/                   
+│   └── mantine-theme.ts  # Mantine 테마 설정
+├── types/                 
+│   └── index.ts          # TypeScript 타입 정의
+└── public/               
+    └── images/           # 프로젝트 스크린샷
 ```
 
 ## 🏃‍♂️ 시작하기

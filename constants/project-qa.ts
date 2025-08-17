@@ -3,7 +3,6 @@ export interface ProjectQA {
   answer: string;
   type: 'technical' | 'business' | 'design';
   code?: string;
-  images?: string[];
 }
 
 const projectQAs: Record<string, ProjectQA[]> = {
@@ -27,8 +26,7 @@ AI와 논의 끝에 관리자 페이지를 통해 원본 데이터 소스에 직
 - 관리자가 필요한 지표의 파라미터를 DB에 저장
 - 실시간으로 원본 API에서 데이터 페칭
 - 비용 절감 및 데이터 최신성 보장`,
-      type: 'technical',
-      images: []
+      type: 'technical'
     },
     {
       question: '파라미터 관리 방식을 하드코딩에서 DB 관리로 변경한 이유는?',
@@ -71,8 +69,7 @@ const INDICATORS = {
 
 // After: DB 기반 동적 파라미터
 const indicator = await db.indicators.findOne({ code: 'GDP' });
-const data = await fetchAPI(indicator.source, indicator.params);`,
-      images: []
+const data = await fetchAPI(indicator.source, indicator.params);`
     },
     {
       question: '복잡한 다중 시계열 차트 UI를 어떻게 설계했나요?',
@@ -108,8 +105,7 @@ SeriesConfiguration 컴포넌트의 혁신:
 - "설정 먼저, 조회 나중" 패러다임으로 문제 해결
 - 사용자가 Y축 배치를 완전히 제어 가능
 - 복잡한 다중 지표도 직관적으로 설정`,
-      type: 'technical',
-      images: []
+      type: 'technical'
     },
     {
       question: 'AI와의 협업 방법론은 어떻게 구축했나요?',
@@ -145,8 +141,7 @@ https://github.com/Seungwoo321/etorch-docs/blob/main/ROOT_CAUSE_ANALYSIS_GUIDE.m
 - 명확한 가이드라인으로 AI와 일관된 협업
 - 예상치 못한 개선사항 발견 및 적용
 - 6개월 막혔던 문제를 2주 만에 해결`,
-      type: 'technical',
-      images: []
+      type: 'technical'
     }
   ],
 
@@ -175,8 +170,7 @@ https://github.com/Seungwoo321/etorch-docs/blob/main/ROOT_CAUSE_ANALYSIS_GUIDE.m
 - 18개 게임 기획 중 2개 완료, 나머지 점진적 구현 예정
 - Promise Battle (비동기) 게임 개발 중
 - 각 게임당 15단계씩 총 270개 스테이지 목표`,
-      type: 'design',
-      images: ['/images/penguinjs-game-concept.svg']
+      type: 'design'
     },
     {
       question: 'Closure Cave 게임의 학습 메커니즘은 어떻게 설계했나요?',
@@ -214,8 +208,7 @@ function openTreasureBox() {
 }
 
 const getTreasure = openTreasureBox();
-return getTreasure(); // 펭귄이 보물 획득!`,
-      images: ['/images/penguinjs-closure-cave.svg']
+return getTreasure(); // 펭귄이 보물 획득!`
     },
     {
       question: 'CallStack Library 게임은 어떻게 콜스택을 학습시키나요?',
@@ -253,8 +246,7 @@ return getTreasure(); // 펭귄이 보물 획득!`,
 - 레이아웃별로 UI 구성과 평가 방식이 다름
 - 점진적 난이도 상승으로 자연스러운 학습
 - 실제 코드 작성과 실행 순서 예측 병행`,
-      type: 'technical',
-      images: ['/images/penguinjs-callstack-library.svg']
+      type: 'technical'
     },
     {
       question: '게임 개발하면서 가장 어려웠던 점은 무엇인가요?',
@@ -327,8 +319,7 @@ AI 개발의 교훈:
 - 번들 사이즈 30% 감소
 - shadcn/ui 환경에서 안정적 동작
 - 100% 테스트 커버리지와 자동 배포 구축`,
-      type: 'technical',
-      images: []
+      type: 'technical'
     },
     {
       question: 'AI와의 역할 분담은 어떻게 했나요?',
@@ -360,8 +351,7 @@ AI 협업에서 발견한 인사이트:
 
 결론: 처음부터 만드는 프로젝트라 AI에 전면 위임이 가능했고, 
 기존 프로젝트에선 AI 수정이 부담될 수 있지만 새 프로젝트에서는 매우 효과적`,
-      type: 'technical',
-      images: []
+      type: 'technical'
     },
     {
       question: '테스트 커버리지 100%인데 버그가 발견되었다고요?',
@@ -377,8 +367,7 @@ AI 협업에서 발견한 인사이트:
 여러 버그를 효율적으로 수정하기 위해 Git 워크트리를 활용하고 있습니다. 각 버그별로 독립된 작업 공간을 만들어 병렬 개발을 진행하고, CLAUDE_HANDOVER.md로 AI와의 작업 인수인계를 체계화했습니다.
 
 단순 유닛 테스트로는 발견하기 어려운 복잡한 상호작용 버그들을 동시에 해결해 나가고 있으며, 최종 테스트를 거친 후 다시 배포될 예정입니다.`,
-      type: 'technical',
-      images: []
+      type: 'technical'
     }
   ],
 
@@ -477,8 +466,7 @@ WebView (React 웹앱) 담당:
 - 웹 기술 활용 가능
 - 빠른 개발 속도
 - 크로스 플랫폼 일관성`,
-      type: 'technical',
-      images: ['/images/learning-app-architecture.svg']
+      type: 'technical'
     }
   ],
 

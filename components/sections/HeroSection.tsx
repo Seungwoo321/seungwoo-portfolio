@@ -51,8 +51,8 @@ export default function HeroSection() {
               <Text size="sm" className="text-gray-600 dark:text-gray-400">Active Projects</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-orange-600 dark:text-orange-400">5년+</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">Maintenance</Text>
+              <Text size="2xl" fw={700} className="text-orange-600 dark:text-orange-400">6년+</Text>
+              <Text size="sm" className="text-gray-600 dark:text-gray-400">오픈소스 유지보수</Text>
             </div>
           </div>
 

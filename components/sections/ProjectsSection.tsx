@@ -7,17 +7,15 @@ import {
   IconExternalLink, 
   IconBrandNpm,
   IconStar,
-  IconGitFork,
   IconDownload,
   IconUsers,
   IconChartBar,
   IconCode,
-  IconRocket,
   IconBrain,
   IconBook,
   IconPlayerPlay
 } from '@tabler/icons-react';
-import { projects, getProjectsByCategory, getAllProjects } from '@/constants/projects-data';
+import { getProjectsByCategory, getAllProjects } from '@/constants/projects-data';
 import type { Project, ProjectCategory } from '@/types';
 import Link from 'next/link';
 
