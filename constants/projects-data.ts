@@ -372,23 +372,23 @@ export const projects: Project[] = [
     images: [
       { 
         url: '/images/penguinjs-1.png', 
-        alt: 'PenguinJS 메인 화면', 
-        caption: '게임 선택 화면 - Closure Cave와 CallStack Library 2개 게임 구현 완료' 
+        alt: 'PenguinJS 히어로 화면', 
+        caption: '게임 사이트 메인 히어로 섹션 - JavaScript를 게임으로 배우는 새로운 방법' 
       },
       { 
         url: '/images/penguinjs-2.png', 
-        alt: 'Closure Cave 게임 플레이', 
-        caption: 'Closure Cave Stage 3 - 외부 변수 접근하기: 펭귄이 동굴에서 보물(🔮)을 찾는 클로저 학습' 
+        alt: 'Closure Cave Stage 2', 
+        caption: '클로저 동굴 스테이지 2 - 펭귄이 동굴에서 클로저 개념을 탐험하며 학습' 
       },
       { 
         url: '/images/penguinjs-3.png', 
-        alt: 'CallStack Library 게임 플레이', 
-        caption: 'CallStack Library 레이아웃 A - 함수 호출 순서 예측: 콜스택 LIFO 원칙 시각적 학습' 
+        alt: 'CallStack Library Advanced Stage 1', 
+        caption: '콜스택 도서관 고급 스테이지 1 - 복잡한 함수 호출 순서와 실행 컨텍스트 학습' 
       },
       { 
         url: '/images/penguinjs-4.png', 
-        alt: 'Closure Cave 스테이지 선택', 
-        caption: 'Closure Cave 전체 15단계 - 초급 5단계 완료, 중급/고급 단계 진행 중' 
+        alt: '게임 컬렉션', 
+        caption: '게임 컬렉션 대시보드 - 18개 게임 중 2개(Closure Cave, CallStack Library)만 활성화, 나머지는 개발 예정' 
       },
     ],
   },

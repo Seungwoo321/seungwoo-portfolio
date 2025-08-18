@@ -240,8 +240,8 @@ function ProjectCard({ project }: { project: Project }) {
                 variant="light"
                 size="lg"
                 className={link.private 
-                  ? "bg-gray-100 cursor-not-allowed opacity-50 text-gray-500 dark:bg-gray-800 dark:text-gray-600"
-                  : "bg-blue-100 hover:bg-blue-200 text-blue-900 dark:bg-blue-950/30 dark:hover:bg-blue-900/50 dark:text-blue-300"
+                  ? "bg-gray-800 cursor-not-allowed opacity-50 text-gray-600"
+                  : "bg-blue-950/30 hover:bg-blue-900/50 text-blue-300"
                 }
                 disabled={link.private}
               >
@@ -256,7 +256,7 @@ function ProjectCard({ project }: { project: Project }) {
           href={`/project/${project.id}`}
           variant="subtle"
           size="xs"
-          className="ml-auto text-blue-800 hover:bg-blue-50 dark:text-blue-400 dark:hover:bg-blue-900/20"
+          className="ml-auto text-blue-400 hover:bg-blue-900/20"
         >
           자세히 보기
         </Button>
@@ -273,7 +273,7 @@ export default function ProjectsSection() {
     : getProjectsByCategory(activeTab as ProjectCategory);
 
   return (
-    <section id="projects" className="py-32 bg-gray-50 dark:bg-gray-900">
+    <section id="projects" className="py-32 bg-gray-900">
       <Container size="xl" py={32}>
         <div className="text-center mb-12">
           <Title order={2} className="text-3xl md:text-4xl font-bold mb-4">

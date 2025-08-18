@@ -117,8 +117,8 @@ export default function ProjectDetailPage() {
                     target={link.private ? undefined : "_blank"}
                     variant="light"
                     className={link.private 
-                      ? "bg-gray-100 cursor-not-allowed opacity-50 text-gray-500 dark:bg-gray-800 dark:text-gray-600"
-                      : "bg-blue-100 hover:bg-blue-200 text-blue-900 dark:bg-blue-950/30 dark:hover:bg-blue-900/50 dark:text-blue-300"
+                      ? "bg-gray-800 cursor-not-allowed opacity-50 text-gray-600"
+                      : "bg-blue-950/30 hover:bg-blue-900/50 text-blue-300"
                     }
                     leftSection={getIcon()}
                     disabled={link.private}
@@ -257,7 +257,7 @@ export default function ProjectDetailPage() {
                     <Accordion.Panel>
                       <Text className="whitespace-pre-wrap">{item.answer}</Text>
                       {item.code && (
-                        <Card withBorder mt="md" className="bg-gray-50 dark:bg-gray-900">
+                        <Card withBorder mt="md" className="bg-gray-900">
                           <pre className="text-sm overflow-x-auto">
                             <code>{item.code}</code>
                           </pre>
@@ -315,7 +315,7 @@ export default function ProjectDetailPage() {
                   </Group>
                   <Group>
                     <Text fw={500} className="w-32">카테고리:</Text>
-                    <Badge variant="light" className="bg-indigo-100 text-indigo-900 dark:bg-indigo-950/30 dark:text-indigo-300">
+                    <Badge variant="light" className="bg-indigo-950/30 text-indigo-300">
                       {project.category === 'opensource' && '오픈소스'}
                       {project.category === 'ai-powered' && 'AI 개발'}
                       {project.category === 'work' && '업무'}
@@ -342,7 +342,7 @@ export default function ProjectDetailPage() {
             component={Link}
             href="/#projects"
             variant="light"
-            className="bg-slate-100 hover:bg-slate-200 text-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-300"
+            className="bg-slate-800 hover:bg-slate-700 text-slate-300"
             leftSection={<IconArrowLeft size={16} />}
           >
             프로젝트 목록으로

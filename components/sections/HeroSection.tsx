@@ -26,9 +26,9 @@ export default function HeroSection() {
 
           {/* Key Highlights */}
           <Group justify="center" gap="md" className="mb-8">
-            <Badge size="lg" variant="light" className="bg-blue-100 text-blue-900 dark:bg-blue-950/50 dark:text-blue-300">React 19 & Next.js 15</Badge>
-            <Badge size="lg" variant="light" className="bg-indigo-100 text-indigo-900 dark:bg-indigo-950/50 dark:text-indigo-300">TypeScript Expert</Badge>
-            <Badge size="lg" variant="light" className="bg-slate-100 text-slate-900 dark:bg-slate-800/50 dark:text-slate-300">AI Pair Programming</Badge>
+            <Badge size="lg" variant="light" className="bg-blue-950/50 text-blue-300">React 19 & Next.js 15</Badge>
+            <Badge size="lg" variant="light" className="bg-indigo-950/50 text-indigo-300">TypeScript Expert</Badge>
+            <Badge size="lg" variant="light" className="bg-slate-800/50 text-slate-300">AI Pair Programming</Badge>
           </Group>
 
           {/* Brief Introduction */}
@@ -39,20 +39,20 @@ export default function HeroSection() {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10 max-w-2xl mx-auto">
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-blue-800 dark:text-blue-400">175+</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">GitHub Stars</Text>
+              <Text size="2xl" fw={700} className="text-blue-400">175+</Text>
+              <Text size="sm" className="text-gray-400">GitHub Stars</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-indigo-800 dark:text-indigo-400">850+</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">Weekly Downloads</Text>
+              <Text size="2xl" fw={700} className="text-indigo-400">850+</Text>
+              <Text size="sm" className="text-gray-400">Weekly Downloads</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-slate-800 dark:text-slate-400">7</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">Active Projects</Text>
+              <Text size="2xl" fw={700} className="text-slate-400">7</Text>
+              <Text size="sm" className="text-gray-400">Active Projects</Text>
             </div>
             <div className="text-center">
-              <Text size="2xl" fw={700} className="text-cyan-800 dark:text-cyan-400">6년+</Text>
-              <Text size="sm" className="text-gray-600 dark:text-gray-400">오픈소스 유지보수</Text>
+              <Text size="2xl" fw={700} className="text-cyan-400">6년+</Text>
+              <Text size="sm" className="text-gray-400">오픈소스 유지보수</Text>
             </div>
           </div>
 
@@ -76,7 +76,7 @@ export default function HeroSection() {
               href="https://linkedin.com/in/seungwoo321"
               target="_blank"
               variant="light"
-              className="bg-indigo-100 hover:bg-indigo-200 text-indigo-900 dark:bg-indigo-950/30 dark:hover:bg-indigo-900/50 dark:text-indigo-300"
+              className="bg-indigo-950/30 hover:bg-indigo-900/50 text-indigo-300"
             >
               LinkedIn
             </Button>
@@ -87,7 +87,7 @@ export default function HeroSection() {
               href="https://seungwoo321.github.io/"
               target="_blank"
               variant="outline"
-              className="border-slate-600 text-slate-700 hover:bg-slate-50 dark:border-slate-400 dark:text-slate-400 dark:hover:bg-slate-800/30"
+              className="border-slate-400 text-slate-400 hover:bg-slate-800/30"
             >
               Tech Blog
             </Button>
