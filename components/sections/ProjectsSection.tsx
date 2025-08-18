@@ -229,14 +229,21 @@ function ProjectCard({ project }: { project: Project }) {
           };
 
           return (
-            <Tooltip key={link.url} label={link.label || link.type}>
+            <Tooltip 
+              key={link.url} 
+              label={link.private ? `${link.label || link.type} (Private Repository)` : (link.label || link.type)}
+            >
               <ActionIcon
-                component="a"
-                href={link.url}
-                target="_blank"
+                component={link.private ? "div" : "a"}
+                href={link.private ? undefined : link.url}
+                target={link.private ? undefined : "_blank"}
                 variant="light"
                 size="lg"
-                className="bg-blue-100 hover:bg-blue-200 text-blue-900 dark:bg-blue-950/30 dark:hover:bg-blue-900/50 dark:text-blue-300"
+                className={link.private 
+                  ? "bg-gray-100 cursor-not-allowed opacity-50 text-gray-500 dark:bg-gray-800 dark:text-gray-600"
+                  : "bg-blue-100 hover:bg-blue-200 text-blue-900 dark:bg-blue-950/30 dark:hover:bg-blue-900/50 dark:text-blue-300"
+                }
+                disabled={link.private}
               >
                 {getIcon()}
               </ActionIcon>

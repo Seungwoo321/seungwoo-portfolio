@@ -427,7 +427,7 @@ export const projects: Project[] = [
       'React 19와 Expo SDK 53 호환성 이슈 해결',
     ],
     links: [
-      { type: 'github', url: 'https://github.com/Seungwoo321/frontend-learning-app' },
+      { type: 'github', url: 'https://github.com/Seungwoo321/frontend-learning-app', private: true },
     ],
     images: [
       { url: '/images/learning-app-1.png', alt: '홈 화면', caption: '앱 메인 화면과 빠른 시작' },

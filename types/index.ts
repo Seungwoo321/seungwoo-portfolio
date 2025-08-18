@@ -40,6 +40,7 @@ export interface ProjectLink {
   type: 'github' | 'demo' | 'npm' | 'website' | 'docs' | 'article';
   url: string;
   label?: string;
+  private?: boolean;
 }
 
 export interface ProjectImage {
