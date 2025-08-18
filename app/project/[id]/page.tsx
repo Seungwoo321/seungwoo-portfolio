@@ -139,7 +139,11 @@ export default function ProjectDetailPage() {
             <Tabs.Tab value="overview" leftSection={<IconInfoCircle size={16} />}>
               개요
             </Tabs.Tab>
-            <Tabs.Tab value="screenshots" leftSection={<IconScreenshot size={16} />}>
+            <Tabs.Tab 
+              value="screenshots" 
+              leftSection={<IconScreenshot size={16} />}
+              className="data-[active=true]:bg-blue-900/20 data-[active=true]:text-blue-400"
+            >
               스크린샷
             </Tabs.Tab>
             {qa && qa.length > 0 && (
@@ -214,26 +218,28 @@ export default function ProjectDetailPage() {
           {/* Screenshots Tab */}
           <Tabs.Panel value="screenshots" pt="xl">
             {project.images && project.images.length > 0 ? (
-              <SimpleGrid cols={{ base: 1, md: project.images.length === 1 ? 1 : 2 }} spacing="lg">
+              <Stack gap="xl">
                 {project.images.map((image, idx) => (
-                  <Card key={idx} withBorder>
-                    <Card.Section>
+                  <Card key={idx} withBorder shadow="sm" className="overflow-hidden">
+                    <Card.Section className="bg-gray-100 dark:bg-gray-900">
                       <Image
                         src={image.url}
                         alt={image.alt}
-                        h={project.images?.length === 1 ? 400 : 300}
+                        h={{ base: 400, sm: 500, md: 600 }}
                         fit="contain"
-                        p="md"
+                        className="w-full"
                       />
                     </Card.Section>
                     {image.caption && (
-                      <Text size="sm" c="dimmed" mt="sm" ta="center" px="md" pb="md">
-                        {image.caption}
-                      </Text>
+                      <div className="p-4 bg-gray-50 dark:bg-gray-950 border-t dark:border-gray-800">
+                        <Text size="sm" c="dimmed" ta="center" fw={500}>
+                          {image.caption}
+                        </Text>
+                      </div>
                     )}
                   </Card>
                 ))}
-              </SimpleGrid>
+              </Stack>
             ) : (
               <Alert color="blue" icon={<IconInfoCircle />}>
                 스크린샷이 준비 중입니다.

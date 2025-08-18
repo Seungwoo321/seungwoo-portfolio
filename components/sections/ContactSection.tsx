@@ -42,7 +42,7 @@ export default function ContactSection() {
               </Button>
             </Group>
 
-            <Text size="sm" c="dimmed" className="mb-4">
+            <Text size="sm" c="dimmed" className="mb-6 mt-8">
               소셜 미디어로도 연락 가능합니다
             </Text>
 
@@ -79,9 +79,9 @@ export default function ContactSection() {
               </Button>
             </Group>
 
-            <Text size="xs" c="dimmed" className="mt-8">
+            <Text size="xs" c="dimmed" className="mt-12 leading-relaxed">
               프론트엔드 개발과 사용자 경험 개선에 열정을 가지고 있습니다.
-              <br />
+              <br className="mb-2" />
               함께 성장할 수 있는 기회를 찾고 있습니다.
             </Text>
           </Paper>
