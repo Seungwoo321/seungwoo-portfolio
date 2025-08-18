@@ -57,9 +57,9 @@ export default function ProjectDetailPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-gray-50 to-white dark:from-gray-900 dark:to-black">
+    <main className="min-h-screen bg-gradient-to-b from-gray-900 to-black">
       {/* Header */}
-      <section className="border-b dark:border-gray-800">
+      <section className="border-b border-gray-800">
         <Container size="lg" className="py-8">
           <Button 
             component={Link} 
@@ -174,7 +174,7 @@ export default function ProjectDetailPage() {
                   <SimpleGrid cols={{ base: 2, sm: 3, md: project.achievements.length === 3 ? 3 : 4 }} spacing="lg">
                     {project.achievements.map((achievement, idx) => (
                       <div key={idx} className="text-center">
-                        <Text size="2xl" fw={700} className="text-blue-600 dark:text-blue-400">
+                        <Text size="2xl" fw={700} className="text-blue-400">
                           {achievement.metric}
                         </Text>
                         <Text size="sm" c="dimmed" mt="xs">
@@ -221,7 +221,7 @@ export default function ProjectDetailPage() {
               <Stack gap="xl">
                 {project.images.map((image, idx) => (
                   <Card key={idx} withBorder shadow="sm" className="overflow-hidden">
-                    <Card.Section className="bg-gray-100 dark:bg-gray-900">
+                    <Card.Section className="bg-gray-900">
                       <Image
                         src={image.url}
                         alt={image.alt}
@@ -231,7 +231,7 @@ export default function ProjectDetailPage() {
                       />
                     </Card.Section>
                     {image.caption && (
-                      <div className="p-4 bg-gray-50 dark:bg-gray-950 border-t dark:border-gray-800">
+                      <div className="p-4 bg-gray-950 border-t border-gray-800">
                         <Text size="sm" c="dimmed" ta="center" fw={500}>
                           {image.caption}
                         </Text>
