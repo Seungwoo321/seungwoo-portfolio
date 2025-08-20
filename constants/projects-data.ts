@@ -10,7 +10,7 @@ export const projects: Project[] = [
     longDescription: '복잡한 데이터를 드래그 앤 드롭으로 쉽게 분석할 수 있는 피벗 테이블 컴포넌트입니다. 원본 PivotTable.js의 jQuery 의존성을 완전히 제거하고 Vue.js의 반응형 시스템으로 재구현하여 번들 사이즈를 40% 줄이고 성능을 30% 개선했습니다. 5년간 지속적으로 유지보수하며 커뮤니티 기여를 받아 발전시켜온 프로젝트입니다.',
     category: 'opensource' as ProjectCategory,
     status: 'maintained',
-    technologies: ['Vue.js 2', 'JavaScript', 'Rollup', 'NPM', 'Jest'],
+    technologies: ['Vue.js 2', 'JavaScript', 'Vite', 'NPM', 'pnpm'],
     role: '오픈소스 메인테이너',
     period: '2019.08 - 현재',
     featured: true,
@@ -416,8 +416,6 @@ export const projects: Project[] = [
       '커스텀 학습 경로: 생성/수정/삭제 가능한 학습 계획 관리',
       '학습 카탈로그: 카테고리별 코스 관리 시스템',
       '복습/연습 모드: 퀴즈 기반 학습 점검 시스템',
-      'Zustand + AsyncStorage: 진도 및 설정 영구 저장',
-      'Expo Router v4: 파일 기반 라우팅 시스템',
     ],
     challenges: [
       'AI 콘텐츠 대량 생성 파이프라인 구축',
